@@ -3,7 +3,7 @@ services:
     image: opencti/connector-reversinglabs-indicator-formatter
     environment:
       - CONNECTOR_NAME=ReversingLabs Indicator Formatter
-      - OPENCTI_URL=http://opencti8080
+      - OPENCTI_URL=http://opencti:8080
       - OPENCTI_TOKEN=ChangeMe
       - CONNECTOR_ID=ChangeMe
       - CONNECTOR_SCOPE=Indicator
