@@ -1,0 +1,12 @@
+services:
+  connector-reversinglabs-indicator-formatter:
+    image: opencti/connector-reversinglabs-indicator-formatter
+    environment:
+      - CONNECTOR_NAME=ReversingLabs Indicator Formatter
+      - OPENCTI_URL=http://opencti8080
+      - OPENCTI_TOKEN=ChangeMe
+      - CONNECTOR_ID=ChangeMe
+      - CONNECTOR_SCOPE=Indicator
+      - CONNECTOR_LOG_LEVEL=debug
+      - CONNECTOR_AUTO=true
+    restart: always
