@@ -16,6 +16,18 @@ The connector works for the following observable types in OpenCTI:
 
 - OpenCTI Platform >= 6.5.8
 
+
+### Example setup using Docker
+
+1. Clone the repo from Github to your environment or OpenCTI instance
+2. Position to /connectors/internal-enrichment/reversinglabs-indicator-formatter
+3. Build the image using the Docker build command: docker build -t opencti/connector-reversinglabs-indicator-formatter . 
+4. Run the image using Docker compose command: docker compose up -d
+5. Ensure that the container is up and running: docker ps | grep indicator
+6. Check that the connector is active, enabled and working in OpenCTI UI -> http://opencti_ip:8080/dashboard/data/ingestion/connectors
+7. Monitor the progress of the formating jobs under: http://opencti_ip:8080/dashboard/data/ingestion/connectors/(RL_Indicator_Formatter_uuid) -> In progress works
+8. Check the IOC's and Observables names under http://opencti_ip:8080/dashboard/observations/indicators
+
 ### Configuration
 
 Configuration parameters are provided using environment variables as described below. Some of them are placed directly in the `docker-compose.yml` since they are not expected to be modified by final users once that they have been defined by the developer of the connector.
